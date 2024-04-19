@@ -23,7 +23,7 @@ CPPFILES := $(wildcard $(SOURCEDIR)/*.cpp)
 OBJECTFILES := $(CPPFILES:$(SOURCEDIR)/%.cpp=$(BUILDDIR)/%.o)
 
 # Compiler flags
-CXXFLAGS := -std=c++20 -O3 -Wall -Werror -Wextra $(MACHDEP) -Iinclude -I$(LIBOGC_INC)
+CXXFLAGS := -I$(LIBOGC_INC) -O3 -std=c++23 -Wall -Werror -Wextra $(MACHDEP)
 
 # Linker editor
 LD := $(CXX)
